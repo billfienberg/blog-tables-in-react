@@ -44,3 +44,43 @@ it(`renders three <tbody>s when there are three states`, () => {
   const wrapper = shallow(<App states={states} />);
   expect(wrapper.find('tbody').length).toEqual(3);
 });
+
+it(`renders one <tr> when the state only has data for one city`, () => {
+  const states = {
+    OH: {
+      name: 'Ohio',
+      abbreviation: 'OH',
+      cities: {
+        "Cleveland": {
+          name: "Cleveland",
+          metroPopulation: "~2.1M"
+        }
+      },
+    },
+  };
+
+  const wrapper = shallow(<App states={states} />);
+  expect(wrapper.find('.Ohio').find('tr').length).toEqual(1);
+});
+
+it(`renders two <tr> when the state only has data for two cities`, () => {
+  const states = {
+    OH: {
+      name: 'Ohio',
+      abbreviation: 'OH',
+      cities: {
+        Cleveland: {
+          name: "Cleveland",
+          metroPopulation: "~2.1M"
+        },
+        Columbus: {
+          name: "Columbus",
+          metroPopulation: "~2.0M"
+        }
+      },
+    },
+  };
+
+  const wrapper = shallow(<App states={states} />);
+  expect(wrapper.find('.Ohio').find('tr').length).toEqual(2);
+});
