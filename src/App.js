@@ -3,7 +3,7 @@ import './App.css';
 
 const App = ({ states = {} }) => {
   const stateValues = Object.values(states);
-  const tbodies = stateValues.map(state => {
+  const tbodies = stateValues.map((state, index) => {
     const cityValues = Object.values(state.cities);
     const cityRows = cityValues.map((city, i) => {
       const stateName =
@@ -21,7 +21,7 @@ const App = ({ states = {} }) => {
         </tr>
       );
     });
-    return <tbody className={state.name}>{cityRows}</tbody>;
+    return <tbody key={index} className={state.name}>{cityRows}</tbody>;
   });
   return (
     <div>
