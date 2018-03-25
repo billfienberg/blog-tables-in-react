@@ -4,7 +4,7 @@
 * **Motivation:** I recently ran into a challenge when trying to cleanly create rows in an HTML table inside a React component.
 * **Primary Takeaway:**
 
->4.9.1 The table element
+>>4.9.1 The table element
 * Categories:
  * Flow content.
  * Palpable content.
