@@ -1,7 +1,14 @@
-Demo: http://row-spans-in-a-react-table.surge.sh/
+* **Demo:** http://row-spans-in-a-react-table.surge.sh/
+* **Repo:** https://github.com/billfienberg/blog-tables-in-react
+* **Blog Post:** Coming Soon
+* **Motivation:** I recently ran into a challenge when trying to cleanly create rows in an HTML table inside a React component.
+* **Primary Takeaway:**
 
-Motivation: I recently ran into a challenge when trying to cleanly create rows in an HTML table inside a React component. 
-
-Takeaways:
-* <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">TIL: According to the spec, an HTML table can have more than one `tbody`. <br><br>&gt;&quot;...followed by either zero or more tbody elements...&quot;<br><br>Source: <a href="https://t.co/OcS2xtyOf4">https://t.co/OcS2xtyOf4</a><a href="https://twitter.com/w3c?ref_src=twsrc%5Etfw">@w3c</a> <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> <a href="https://twitter.com/hashtag/webdevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#webdevelopment</a> <a href="https://twitter.com/hashtag/webdeveloper?src=hash&amp;ref_src=twsrc%5Etfw">#webdeveloper</a> <a href="https://twitter.com/hashtag/html?src=hash&amp;ref_src=twsrc%5Etfw">#html</a> <a href="https://twitter.com/hashtag/table?src=hash&amp;ref_src=twsrc%5Etfw">#table</a> <a href="https://twitter.com/hashtag/htmltable?src=hash&amp;ref_src=twsrc%5Etfw">#htmltable</a> <a href="https://twitter.com/hashtag/tbody?src=hash&amp;ref_src=twsrc%5Etfw">#tbody</a> <a href="https://twitter.com/hashtag/whatwg?src=hash&amp;ref_src=twsrc%5Etfw">#whatwg</a> <a href="https://twitter.com/hashtag/W3C?src=hash&amp;ref_src=twsrc%5Etfw">#W3C</a> <a href="https://twitter.com/hashtag/TIL?src=hash&amp;ref_src=twsrc%5Etfw">#TIL</a></p>&mdash; Bill Fienberg (@BillFienberg) <a href="https://twitter.com/BillFienberg/status/977961056868995073?ref_src=twsrc%5Etfw">March 25, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+>4.9.1 The table element
+* Categories:
+ * Flow content.
+ * Palpable content.
+* Contexts in which this element can be used:
+ * Where flow content is expected.
+* Content model:
+ * In this order: optionally a caption element, followed by zero or more colgroup elements, followed optionally by a thead element, **followed by either zero or more tbody elements** or one or more tr elements, followed optionally by a tfoot element, optionally intermixed with one or more script-supporting elements. - https://html.spec.whatwg.org/multipage/tables.html#the-table-element
