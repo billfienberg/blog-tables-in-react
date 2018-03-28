@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 const App = ({ states = {} }) => {
   const stateValues = Object.values(states);
@@ -7,10 +7,16 @@ const App = ({ states = {} }) => {
     const cityValues = Object.values(state.cities);
     const cityRows = cityValues.map((city, i) => {
       const stateName =
-        i === 0 ? <td rowSpan={cityValues.length + 1}>{state.name}</td> : null;
+        i === 0 ? (
+          <td rowSpan={cityValues.length + 1} className="stateName">
+            {state.name}
+          </td>
+        ) : null;
       const stateAbbreviation =
         i === 0 ? (
-          <td rowSpan={cityValues.length + 1}>{state.abbreviation}</td>
+          <td rowSpan={cityValues.length + 1} className="stateAbbreviation">
+            {state.abbreviation}
+          </td>
         ) : null;
       return (
         <tr key={i}>
@@ -21,7 +27,11 @@ const App = ({ states = {} }) => {
         </tr>
       );
     });
-    return <tbody key={index} className={state.name}>{cityRows}</tbody>;
+    return (
+      <tbody key={index} className={state.name}>
+        {cityRows}
+      </tbody>
+    );
   });
   return (
     <div>
